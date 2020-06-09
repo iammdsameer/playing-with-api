@@ -9,7 +9,7 @@ async function getInfo(username) {
 }
 
 async function getRepoInfo(username) {
-  let response = await fetch(`https://api.github.com/users/${username}/repos`);
+  let response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
   let data = await response.json();
   return data;
 }
